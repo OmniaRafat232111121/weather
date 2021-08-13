@@ -1,0 +1,255 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #1E202B;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.navbar .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo.flex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.logo img {
+  width: 64px;
+  height: 38px;
+}
+
+.context-wrapper {
+  margin-left: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.context-wrapper p {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.context-wrapper small {
+  color: #bdbdbd;
+}
+
+.nav-item {
+  padding: 6px 20px;
+  margin: 0 5px;
+  font-size: 1.4rem;
+  border-radius: 15.7px;
+  border: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-item:hover {
+  border: 2px solid #007399;
+  color: #007399;
+}
+
+.header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 80vh;
+  background: url("https://source.unsplash.com/1600x900/?nature,water") no-repeat center center/cover;
+  padding: 50px 0;
+  font-size: 1.4rem;
+}
+
+.header__search {
+  width: 100%;
+  position: relative;
+}
+
+.header__search input {
+  display: block;
+  width: 100%;
+  background-color: #1E202B;
+  color: #fff;
+  padding: 18px 20px;
+  border: none;
+  outline: none;
+  border-radius: 36px;
+  margin-bottom: 50px;
+}
+
+.header__search .search__btn {
+  position: absolute;
+  background-color: #007399;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  padding: 0 35px;
+  border: 0;
+  outline: none;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.card-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+  color: #bfc1c8;
+}
+
+.card-wrapper > div {
+  width: 33%;
+}
+
+.weather-info-1 .card-header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #2D303D;
+  padding: 10px;
+}
+
+.weather-info-1 .info-body {
+  background: #323544;
+  padding: 25px;
+}
+
+.weather-info-1 .info-body .city-name {
+  font-size: 1.6rem;
+}
+
+.temperature {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.temperature h2 {
+  font-size: 9rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 15px;
+}
+
+.weather-status {
+  color: #09c;
+}
+
+.icons {
+  margin-top: 15px;
+}
+
+.icons .icon:not(:last-child) {
+  margin-right: 20px;
+}
+
+.weather-info-2, .weather-info-3 {
+  text-align: center;
+  background: #262936;
+}
+
+.weather-info-2 .card-header, .weather-info-3 .card-header {
+  background: #1E202B;
+  padding: 10px;
+}
+
+.weather-info-2 .info-body, .weather-info-3 .info-body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100% - 38px);
+}
+
+.weather-info-2 .info-body .weather-status, .weather-info-3 .info-body .weather-status {
+  margin-top: 15px;
+}
+
+.day-temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0 0;
+}
+
+.weather-info-3 {
+  background: #2D303D;
+}
+
+.weather-info-3 .card-header {
+  background: #323544;
+}
+/*# sourceMappingURL=style.css.map */

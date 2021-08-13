@@ -1,0 +1,223 @@
+// Global resets
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+    color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+@import "variabels";
+
+// Initialize classes
+.flex {
+    display: flex;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+// Start Navbar
+
+.navbar {
+    background-color: $mainColor;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.navbar .container {
+    justify-content: space-between;
+}
+
+.logo.flex {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logo img {
+    width: 64px;
+    height: 38px;
+}
+
+.context-wrapper {
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #fff;
+    }
+    small {
+        color: #bdbdbd;
+    }
+}
+
+.nav-item {
+    padding: 6px 20px;
+    margin: 0 5px;
+    font-size: 1.4rem;
+    border-radius: 15.7px;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        border: 2px solid $darkBlue;
+        color: $darkBlue;
+    }
+}
+
+// Start Header
+
+.header {
+    flex-direction: column;
+    min-height: 80vh;
+    background: url("https://source.unsplash.com/random?city") no-repeat center center/cover;
+    padding: 50px 0;
+    font-size: 1.4rem;
+
+    &__search {
+        width: 100%;
+        position: relative;
+        input {
+            display: block;
+            width: 100%;
+            background-color: $mainColor;
+            color: #fff;
+            padding: 18px 20px;
+            border: none;
+            outline: none;
+            border-radius: 36px;
+            margin-bottom: 50px;
+        }
+        .search__btn {
+            position: absolute;
+            background-color: $darkBlue;
+            top: 5px;
+            bottom: 5px;
+            right: 5px;
+            padding: 0 35px;
+            border: 0;
+            outline: none;
+            border-radius: 26px;
+            cursor: pointer;
+        }
+    }
+}
+
+.card-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+    color: #bfc1c8;
+    & > div {
+        width: 33%;
+    }
+}
+
+.weather-info-1 {
+    .card-header {
+        justify-content: space-between;
+        background: $lightSecondaryColor;
+        padding: 10px;
+    }
+
+    .info-body {
+        background: $secondaryColor;
+        padding: 25px;
+
+        .city-name {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.temperature {
+    justify-content: space-between;
+    h2 {
+        font-size: 9rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 0 0 15px;
+    }
+}
+
+.weather-status {
+    color: #09c;
+}
+
+.icons {
+    margin-top: 15px;
+    .icon:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.weather-info-2, .weather-info-3 {
+    text-align: center;
+    background: $veryDarkBlue;
+    
+    .card-header {
+        background: $mainColor;
+        padding: 10px;
+    }
+
+    .info-body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 38px);
+        .weather-status {
+            margin-top: 15px;
+        }
+    }
+}
+
+.day-temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0 0
+}
+
+.weather-info-3 {
+    background: $lightSecondaryColor;
+
+    .card-header {
+        background: $secondaryColor;
+    }
+}
